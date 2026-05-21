@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Cliente;
 use Illuminate\Http\Request;
-use function views;
+use function view;
 
 class ClienteController extends Controller
 {
