@@ -13,6 +13,31 @@
 
 namespace App\Models{
 /**
+ * @property int $id
+ * @property string $nombre
+ * @property string|null $ruc_cedula
+ * @property string|null $telefono
+ * @property string|null $direccion
+ * @property string|null $correo
+ * @property \Illuminate\Support\Carbon|null $created_at
+ * @property \Illuminate\Support\Carbon|null $updated_at
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Cliente newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Cliente newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Cliente query()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Cliente whereCorreo($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Cliente whereCreatedAt($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Cliente whereDireccion($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Cliente whereId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Cliente whereNombre($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Cliente whereRucCedula($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Cliente whereTelefono($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Cliente whereUpdatedAt($value)
+ */
+	class Cliente extends \Eloquent {}
+}
+
+namespace App\Models{
+/**
  * @method static \Illuminate\Database\Eloquent\Builder<static>|Credencial newModelQuery()
  * @method static \Illuminate\Database\Eloquent\Builder<static>|Credencial newQuery()
  * @method static \Illuminate\Database\Eloquent\Builder<static>|Credencial query()
@@ -22,11 +47,28 @@ namespace App\Models{
 
 namespace App\Models{
 /**
+ * @property int $id
+ * @property int $cliente_id
+ * @property string $tipo
+ * @property string|null $marca
+ * @property string|null $modelo
+ * @property string|null $ubicacion
+ * @property \Illuminate\Support\Carbon|null $created_at
+ * @property \Illuminate\Support\Carbon|null $updated_at
+ * @property-read \App\Models\Cliente $cliente
  * @property-read \Illuminate\Database\Eloquent\Collection<int, \App\Models\Credencial> $credenciales
  * @property-read int|null $credenciales_count
  * @method static \Illuminate\Database\Eloquent\Builder<static>|Dispositivo newModelQuery()
  * @method static \Illuminate\Database\Eloquent\Builder<static>|Dispositivo newQuery()
  * @method static \Illuminate\Database\Eloquent\Builder<static>|Dispositivo query()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Dispositivo whereClienteId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Dispositivo whereCreatedAt($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Dispositivo whereId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Dispositivo whereMarca($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Dispositivo whereModelo($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Dispositivo whereTipo($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Dispositivo whereUbicacion($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Dispositivo whereUpdatedAt($value)
  */
 	class Dispositivo extends \Eloquent {}
 }
